@@ -72,16 +72,6 @@ public class Services {
     }
 
     // 7
-    public List<Model> searchBySemester(String semester) {
-        List<Model> result = new ArrayList<>();
-        for (Model b : buses) {
-            if (b.getSemester().equals(semester))
-                result.add(b);
-        }
-        return result;
-    }
-
-    // 8
     public Model searchByBusNumber(String number) {
         for (Model b : buses) {
             if (b.getBusNumber().equals(number))
@@ -90,12 +80,12 @@ public class Services {
         return null;
     }
 
-    // 9
+    // 8
     public int totalBuses() {
         return buses.size();
     }
 
-    // 10
+    // 9
     public List<Model> searchByDriverName(String name) {
         List<Model> result = new ArrayList<>();
         for (Model b : buses) {
@@ -105,16 +95,7 @@ public class Services {
         return result;
     }
 
-    // 11
-    public Model searchByDriverPhone(String phone) {
-        for (Model b : buses) {
-            if (b.getDriverPhone().equals(phone))
-                return b;
-        }
-        return null;
-    }
-
-    // 12
+    // 10
     public List<Model> searchByBusType(String type) {
         List<Model> result = new ArrayList<>();
         for (Model b : buses) {
@@ -124,7 +105,7 @@ public class Services {
         return result;
     }
 
-    // 13
+    // 11
     public List<Model> searchByPickupPoint(String point) {
         List<Model> result = new ArrayList<>();
         for (Model b : buses) {
@@ -134,17 +115,7 @@ public class Services {
         return result;
     }
 
-    // 14
-    public List<Model> searchByStatus(String status) {
-        List<Model> result = new ArrayList<>();
-        for (Model b : buses) {
-            if (b.getStatus().equals(status))
-                result.add(b);
-        }
-        return result;
-    }
-
-    // 15
+    // 12
     public List<Model> searchByUserType(String type) {
         List<Model> result = new ArrayList<>();
         for (Model b : buses) {
@@ -154,7 +125,7 @@ public class Services {
         return result;
     }
 
-    // 16
+    // 13
     public List<Model> searchBySchedule(String schedule) {
         List<Model> result = new ArrayList<>();
         for (Model b : buses) {
@@ -164,27 +135,7 @@ public class Services {
         return result;
     }
 
-    // 17
-    public List<Model> searchByCapacity(Integer cap) {
-        List<Model> result = new ArrayList<>();
-        for (Model b : buses) {
-            if (b.getCapacity().equals(cap))
-                result.add(b);
-        }
-        return result;
-    }
-
-    // 18
-    public List<Model> capacityGreaterThan(int min) {
-        List<Model> result = new ArrayList<>();
-        for (Model b : buses) {
-            if (b.getCapacity() > min)
-                result.add(b);
-        }
-        return result;
-    }
-
-    // 19
+    // 14
     public boolean updateStatus(Long id, String status) {
         Model b = getBusById(id);
         if (b != null) {
@@ -194,7 +145,7 @@ public class Services {
         return false;
     }
 
-    // 20
+    // 15
     public boolean updateDriverInfo(Long id, String name, String phone) {
         Model b = getBusById(id);
         if (b != null) {

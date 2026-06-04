@@ -2,18 +2,19 @@ package com.iiuc.transportation.model;
 
 public class Model {
 
-    private Long id;
-    private Integer capacity;
-    private String busNumber;
-    private String routeName;
-    private String driverName;
-    private String schedule;
-    private String semester;
-    private String driverPhone;
-    private String busType;
-    private String pickupPoint;
-    private String status;
-    private String userType;
+    private Long id;              //ex: 1,2...
+    private Integer capacity;     //ex: 50,40...
+    private String busNumber;     //ex: 10,55,78...
+    private String routeName;     //ex: agrabad,kotowali...
+    private String driverName;    //ex: jashim,rahim...  
+    private String schedule;      //ex: 7.00 a.m. ,9.05 a.m. ... 
+    private String semester;      //ex: Aut-25,Sp-26 ...  
+    private String driverPhone;   //ex: 01782908290...  
+    private String busType;       //ex: ac / non ac  
+    private String pickupPoint;   //ex: bepari para, mayor goli ...  
+    private String status;        //ex: active / inactive  
+    private String userType;      //ex: male / female  
+
     public Model() {
 
     }
@@ -22,8 +23,7 @@ public class Model {
             String driverName, Integer capacity,
             String schedule, String semester,
             String driverPhone, String busType,
-            String pickupPoint, String status,String userType) 
-    {
+            String pickupPoint, String status, String userType) {
         this.id = id;
         this.busNumber = busNumber;
         this.routeName = routeName;
@@ -35,10 +35,8 @@ public class Model {
         this.busType = busType;
         this.pickupPoint = pickupPoint;
         this.status = status;
-        this.userType= userType;
+        this.userType = userType;
     }
-
-    
 
     public Long getId() {
         return id;
@@ -83,12 +81,10 @@ public class Model {
     public String getStatus() {
         return status;
     }
+
     public String getUserType() {
         return userType;
     }
-
-
-    
 
     public void setId(Long id) {
         this.id = id;
@@ -133,6 +129,7 @@ public class Model {
     public void setStatus(String status) {
         this.status = status;
     }
+
     public void setUserType(String userType) {
         this.userType = userType;
     }

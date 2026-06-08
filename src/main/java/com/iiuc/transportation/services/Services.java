@@ -1,8 +1,11 @@
 package com.iiuc.transportation.services;
+import org.springframework.stereotype.Service;
 
 import com.iiuc.transportation.model.Model;
 import java.util.ArrayList;
 import java.util.List;
+
+@Service
 
 public class Services {
 
